@@ -135,6 +135,13 @@
   .tag{display:inline-block; font-size:11.5px; font-weight:700; padding:2px 9px; border-radius:999px}
   .tag.obj{background:var(--teal-soft); color:var(--teal)}
   .tag.img{background:var(--blue-soft); color:var(--blue)}
+  /* ---------- enunciado da prova ---------- */
+  .enun{background:var(--bg); border:1px dashed var(--line2); border-left:4px solid var(--brand2); border-radius:10px; padding:12px 16px; margin:4px 0 16px; font-size:14.5px}
+  .enun .lbl{display:inline-block; font-size:11px; font-weight:800; letter-spacing:1px; color:var(--brand2); text-transform:uppercase; margin-bottom:6px}
+  .enun .stmt{margin:6px 0}
+  .enun .alts{margin:10px 0 0; padding:10px 12px; background:var(--bg2); border:1px solid var(--line); border-radius:8px; font-size:14px}
+  .enun .alts b{color:var(--ink)}
+  .enun .vf{color:var(--muted); font-family:monospace; font-weight:700}
   /* ---------- chips / pills ---------- */
   .chips{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0}
   .chip{background:var(--bg2); border:1px solid var(--line2); border-radius:999px; padding:6px 14px; font-size:13px; font-weight:600; color:var(--ink-soft)}
@@ -217,6 +224,8 @@
       <a href="#pegadinhas"><span class="num">⚠️</span> Pegadinhas top</a>
       <a href="#glossario"><span class="num">📖</span> Glossário</a>
       <a href="#checklist"><span class="num">✓</span> Checklist da véspera</a>
+      <div class="grp">⭐ Prova resolvida</div>
+      <a href="#prova2023"><span class="num">📝</span> Resolução — Prova 2023</a>
     </nav>
   </aside>
 
@@ -290,13 +299,14 @@
 
     <details class="qa"><summary><span class="q">Q1</span> Quantos quadros por segundo são necessários para percebermos movimento?</summary>
     <div class="body">
-      <p>O olho começa a perceber movimento contínuo a partir de <strong>~12 quadros por segundo (fps)</strong>, mas com cintilação. Para um movimento <strong>fluido e confortável</strong> usa-se:</p>
+      <p>Segundo o material da disciplina (<em>CapituloDeAnimacao.pdf</em>), os números a decorar são:</p>
       <ul>
-        <li><strong>Cinema:</strong> 24 fps</li>
-        <li><strong>TV/vídeo:</strong> 25 fps (PAL) ou 30 fps (NTSC)</li>
-        <li><strong>Jogos / VR:</strong> 60 fps ou mais (para evitar enjoo)</li>
+        <li><strong>Sensação de movimento: 10 quadros por segundo, no mínimo</strong> ⬅️ é o "mínimo para perceber movimento" (caiu na prova!)</li>
+        <li><strong>Desenho animado:</strong> 12 a 24 quadros por segundo</li>
+        <li><strong>Filmes de imagens reais:</strong> cerca de 30 quadros por segundo</li>
       </ul>
-      <p>Abaixo de ~10–12 fps o cérebro percebe imagens "saltando" em vez de movimento.</p>
+      <p>Tudo isso se explica pelo <strong>princípio da persistência da visão</strong> (1828): a retina retém a imagem por uma fração de segundo, e o cérebro "preenche" o movimento entre os quadros.</p>
+      <div class="callout warn"><div class="t">⚠️ Pegadinha de prova</div>Se a questão pede o <strong>mínimo para perceber movimento</strong> → <strong>10 fps</strong>. Não confunda com 24 (desenho animado) nem 30 (filme real).</div>
     </div></details>
 
     <details class="qa"><summary><span class="q">Q2</span> Cite pelo menos 5 aplicações da animação.</summary>
@@ -1474,6 +1484,220 @@ atenuação = 1/(a + b·d + c·d²)</pre></div>
     </div>
     <div class="callout tip"><div class="t">🍀 Boa prova!</div>Revise as <strong>3 contas</strong> (Cohen-Sutherland, Liang-Barsky, normais), decore a <strong>fórmula de Phong</strong> e a tabela <strong>Flat/Gouraud/Phong</strong> — esse é o núcleo que mais cai. Respira fundo e mete bronca. 🎨</div>
     <p class="small" style="margin-top:24px">Guia gerado a partir das 8 listas de exercícios (pasta <em>atividades/exercicios</em>) e do material da disciplina (pasta <em>Saulo</em>). Disciplina: Computação Gráfica. Para imprimir/salvar em PDF: clique em <strong>"Expandir tudo"</strong> e use Ctrl/Cmd + P.</p>
+  </section>
+
+  <!-- ================= RESOLUÇÃO PROVA 2023 ================= -->
+  <section id="prova2023">
+    <div class="sec-tag">⭐ Prova resolvida</div>
+    <h2 class="sec"><span class="ic">📝</span> Resolução — 2ª Prova Bimestral 2023/1</h2>
+    <div class="card">
+      <p style="margin:0"><strong>Universidade Vila Velha</strong> · Ciência da Computação · <strong>Computação Gráfica e Multimídia</strong><br>
+      Turmas CC7M/C · C8M &nbsp;|&nbsp; Data: <strong>12/06/2023</strong> &nbsp;|&nbsp; Valor: 10,0 &nbsp;|&nbsp; Prof. <strong>Saulo Pereira Ribeiro</strong></p>
+    </div>
+
+    <div class="callout warn">
+      <div class="t">⚠️ Aviso de gabarito</div>
+      Respostas obtidas por análise do conteúdo da prova. <strong>Questões 3, 8 e 11</strong> dependem da foto que ainda falta (enunciados/figuras não visíveis) — estão marcadas como <em>⏳ aguardando foto</em>. Quando você enviar a imagem que falta, eu completo.
+    </div>
+
+    <h3>Gabarito rápido</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Questão</th><th>Resposta</th><th>Tema</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td><strong>(e)</strong> I e V</td><td>Shading (Flat/Gouraud/Phong)</td></tr>
+        <tr><td><strong>2</strong></td><td><strong>(a)</strong> I e IV</td><td>Componentes de iluminação</td></tr>
+        <tr><td><strong>3</strong></td><td>⏳ aguardando foto</td><td>—</td></tr>
+        <tr><td><strong>4</strong></td><td><strong>(c)</strong> V, F, V</td><td>Visibilidade</td></tr>
+        <tr><td><strong>5</strong></td><td><strong>(a)</strong> V, F, F</td><td>Shading / iluminação</td></tr>
+        <tr><td><strong>6</strong></td><td><strong>(a)</strong> V, V, F</td><td>Gouraud × Phong</td></tr>
+        <tr><td><strong>7</strong></td><td><strong>I falsa, II verdadeira</strong> (1ª alternativa)</td><td>Ray tracing</td></tr>
+        <tr><td><strong>8</strong></td><td>⏳ aguardando foto</td><td>—</td></tr>
+        <tr><td><strong>9</strong></td><td><strong>(d)</strong> I e II verdadeiras, II justifica I</td><td>Bump map</td></tr>
+        <tr><td><strong>10</strong></td><td><strong>(b)</strong> F, F, F</td><td>Z-buffer / iluminação</td></tr>
+        <tr><td><strong>11</strong></td><td><strong>(e)</strong> 10</td><td>Animação (percepção)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Resolução comentada</h3>
+
+    <details class="qa" open><summary><span class="q">Q1</span> Shading: I a V → resposta (e) I e V</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 1 [ENADE] · 0,5 ponto</span>
+      <p class="stmt">O processo de colorização (shading, sombreamento, tonalização) interpola os valores da função de colorização nos vértices dos polígonos para os pixels no interior do polígono. Existem três tipos principais de colorização: Constante (flat), Gouraud e Phong. Baseado em suas características avalie as seguintes afirmativas:</p>
+      <p class="stmt"><strong>I.</strong> No sombreamento constante, as imagens produzidas são facetadas pois cada polígono possui uma cor constante dada pela sua normal.<br>
+      <strong>II.</strong> O sombreamento por Gouraud é extremamente rápido.<br>
+      <strong>III.</strong> O sombreamento por Gouraud representa highlights típicos de materiais especulares.<br>
+      <strong>IV.</strong> No sombreamento por Phong a função de iluminação não precisa ser avaliada para cada pixel.<br>
+      <strong>V.</strong> O sombreamento por Phong produz efeitos mais realistas</p>
+      <div class="alts">Estão corretas as afirmativas:<br>a) I e III &nbsp; b) III e V &nbsp; c) II e IV &nbsp; d) II e III &nbsp; <b>e) I e V</b></div>
+      </div>
+      <ul>
+        <li><strong>I — VERDADEIRA.</strong> Flat (constante) produz imagem <strong>facetada</strong>, cada polígono com cor constante dada pela sua normal. ✔️</li>
+        <li><strong>II — FALSA.</strong> "Gouraud extremamente rápido" — o <strong>extremamente rápido é o Flat</strong>. Gouraud tem custo médio.</li>
+        <li><strong>III — FALSA.</strong> Gouraud <strong>perde</strong> highlights especulares pequenos (não os representa bem). Quem representa bem é o Phong.</li>
+        <li><strong>IV — FALSA.</strong> No Phong a iluminação <strong>precisa</strong> ser avaliada para <strong>cada pixel</strong> (é justamente o que ele faz).</li>
+        <li><strong>V — VERDADEIRA.</strong> Phong produz os efeitos mais realistas. ✔️</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (e) I e V</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q2</span> Componentes nas figuras 1–4 → resposta (a) I e IV</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 2 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">No modelo de reflexão local, também conhecido como modelo de reflexão de Phong, atuam três componentes: ambiente, difusa e especular. Nas figuras abaixo as componentes podem estar atuando sozinhas ou em combinação com outras componentes. <em>(Figura 1, Figura 2, Figura 3 e Figura 4 — cada uma com 5 esferas.)</em></p>
+      <p class="stmt">Avalie as afirmativas abaixo:<br>
+      <strong>I.</strong> Na figura 1 atuam as componentes ambiente e difusa<br>
+      <strong>II.</strong> Na figura 2 atua somente a componente especular<br>
+      <strong>III.</strong> Na figura 3 atua somente a componente ambiente e na figura 2 somente a especular<br>
+      <strong>IV.</strong> Na figura 4 atuam as três componentes: ambiente, difusa e especular<br>
+      <strong>V.</strong> Na figura 1 atua somente a componente difusa</p>
+      <div class="alts">Estão corretas as afirmações:<br><b>a) I e IV</b> &nbsp; b) III e IV &nbsp; c) II e V &nbsp; d) III e V &nbsp; e) I e III</div>
+      </div>
+      <ul>
+        <li><strong>I — VERDADEIRA.</strong> Figura 1: gradiente suave que não chega a preto total → <strong>ambiente + difusa</strong>. ✔️</li>
+        <li><strong>II — FALSA.</strong> "Figura 2 = somente especular" não bate: especular sozinha seria esfera <strong>preta com um ponto de brilho</strong>, não um gradiente claro.</li>
+        <li><strong>III — FALSA.</strong> Depende da II ("fig 2 somente especular"), que já é falsa.</li>
+        <li><strong>IV — VERDADEIRA.</strong> Figura 4: tem brilho especular pontual + volume (difusa) + nunca totalmente preta (ambiente) → <strong>as três componentes</strong>. ✔️</li>
+        <li><strong>V — FALSA.</strong> Contradiz a I (a figura 1 tem ambiente + difusa, não só difusa).</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (a) I e IV</div></div>
+      <p class="small">Dedução robusta: a IV é certa (fig 4 tem highlight) e só as alternativas (a) e (b) contêm IV; a (b) exige a III, que cai junto com a II. Logo, (a).</p>
+    </div></details>
+
+    <details class="qa"><summary><span class="q">Q3</span> ⏳ Aguardando foto</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 3 [ENADE] · 1,0 ponto</span>
+      <p class="stmt"><em>Enunciado e figuras não visíveis nas fotos.</em> Apareceram apenas as alternativas:</p>
+      <div class="alts">Estão corretas as afirmações:<br>a) <span class="vf">(cortada)</span> … e III &nbsp; b) II e III &nbsp; c) II e V &nbsp; d) III e V &nbsp; e) I e IV</div>
+      </div>
+      <p>⏳ <strong>Envie a foto que falta</strong> com o enunciado e as figuras desta questão e eu resolvo na hora.</p>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q4</span> V/F: backface culling, depth-priority, z-buffer → (c) V, F, V</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 4 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Assinale V ou F:</p>
+      <p class="stmt"><span class="vf">( )</span> Ao se utilizar o método da normal (backface culling), diz-se que uma face ou faces do objeto são visíveis se o produto escalar entre a direção de observação e o vetor normal a face é negativo.</p>
+      <p class="stmt"><span class="vf">( )</span> O algoritmo depth-priority pode ser usado para cenários com objetos que não sejam opacos. Neste caso renderiza-se o que está na frente primeiro e o que está mais atrás depois.</p>
+      <p class="stmt"><span class="vf">( )</span> O algoritmo que faz o sort pela profundidade usando um buffer trata casos de visibilidade para qualquer tipo de superfície. Além disso este algoritmo para ser executado não precisa de que os objetos sejam ordenados.</p>
+      <div class="alts">Assinale a alternativa correta:<br>a) F, F, V &nbsp; b) F, V, F &nbsp; <b>c) V, F, V</b> &nbsp; d) F, V, V &nbsp; e) V, F, F</div>
+      </div>
+      <ul>
+        <li><strong>(V)</strong> Backface culling: a face é <strong>visível</strong> quando o produto escalar entre a <strong>direção de observação</strong> e a normal é <strong>negativo</strong> (a normal aponta "contra" a direção de visão, ou seja, de volta para o olho). ✔️</li>
+        <li><strong>(F)</strong> Depth-priority para objetos <strong>não opacos</strong> deve renderizar de <strong>trás para frente</strong> (o mais atrás primeiro). A frase diz "o da frente primeiro" → <strong>ordem errada</strong>.</li>
+        <li><strong>(V)</strong> O "sort por profundidade usando um buffer" é o <strong>Z-buffer</strong>: trata qualquer tipo de superfície e <strong>não precisa ordenar</strong> os objetos. ✔️</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (c) V, F, V</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q5</span> V/F: Gouraud, método local, Flat → (a) V, F, F</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 5 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Assinale V ou F:</p>
+      <p class="stmt"><span class="vf">( )</span> O shading de Gouroud quando aplicado computa a cor em cada vértice da face e os pontos internos deste faca tem sua cor via interpolação.</p>
+      <p class="stmt"><span class="vf">( )</span> O método simplificado para iluminar as cenas (local) é o mais usado, onde atuam somente duas componentes da luz.</p>
+      <p class="stmt"><span class="vf">( )</span> O modelo Flat para tonalização é o mais rápido bem como o que dá maior nitidez e qualidade final. As normais das faces estão associadas a cada ponto da mesma.</p>
+      <div class="alts">Assinale a alternativa correta:<br><b>a) V, F, F</b> &nbsp; b) F, F, F &nbsp; c) F, V, V &nbsp; d) V, V, F &nbsp; e) V, F, V</div>
+      </div>
+      <ul>
+        <li><strong>(V)</strong> Gouraud calcula a cor <strong>em cada vértice</strong> e os pontos internos recebem cor por <strong>interpolação</strong>. ✔️</li>
+        <li><strong>(F)</strong> O modelo local é o mais usado (verdade), mas atuam <strong>três</strong> componentes (ambiente, difusa, especular), não "somente duas".</li>
+        <li><strong>(F)</strong> Flat é o mais rápido (verdade), porém <strong>não dá maior nitidez/qualidade</strong> (é o de pior qualidade, facetado). Logo a afirmação inteira é falsa.</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (a) V, F, F</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q6</span> V/F: Gouraud highlights, Phong (normais/pixel), Phong = paradigma → (a) V, V, F</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 6 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Assinale V ou F:</p>
+      <p class="stmt"><span class="vf">( )</span> Ao se adotar Gouroud pode-se falhar na representação dos highlights quando se usa malhas com baixo grau de detalhe.</p>
+      <p class="stmt"><span class="vf">( )</span> Tonalização por Phong computa o vetor perpendicular de cada vértice da face. Para cada ponto interno da face é feito uma interpolação dos vetores perpendiculares supra citados. Com estes vetores perpendiculares nos pontos internos é feito o cômputo da cor em cada pixel.</p>
+      <p class="stmt"><span class="vf">( )</span> Tonalização por Phong e o paradigma de iluminação dele são a mesma coisa. Nele é definido o uso de três componentes da luz e como deve ser feito o cômputo da integração da luz.</p>
+      <div class="alts">Assinale a alternativa correta:<br><b>a) V, V, F</b> &nbsp; b) F, F, F &nbsp; c) F, V, F &nbsp; d) V, F, F &nbsp; e) V, V, V</div>
+      </div>
+      <ul>
+        <li><strong>(V)</strong> Gouraud pode <strong>falhar nos highlights</strong> com malhas de baixo detalhe. ✔️</li>
+        <li><strong>(V)</strong> Phong computa o vetor perpendicular (normal) em cada vértice, <strong>interpola as normais</strong> nos pontos internos e calcula a <strong>cor por pixel</strong>. ✔️ (descrição exata do Phong shading)</li>
+        <li><strong>(F)</strong> Phong shading <strong>não</strong> é a mesma coisa que o "paradigma de iluminação dele" (modelo de reflexão de Phong). São conceitos diferentes.</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (a) V, V, F</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q7</span> Asserção/razão (ray tracing) → I falsa, II verdadeira</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 7 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Os estudos avançados na área de Computação Gráfica têm demonstrado bastante interesse no que diz respeito ao foto-realismo, ou seja, geração de imagens com alto grau de realismo. A técnica de Ray-Tracing oferece uma ferramenta simples e poderosa para esse estudo. Atualmente, existem diversos algoritmos de visualização de superfícies e sólidos, porém nenhum deles é tão simples e tão poderoso quanto o Ray Tracing.</p>
+      <p class="stmt">Avalie a seguinte asserção/razão:<br>
+      <strong>I —</strong> O ray-tracing tem no seu algoritmo várias chamadas recursivas, com somente raios refletidos.<br>
+      <strong>PORQUE</strong><br>
+      <strong>II —</strong> São exatamente as chamadas recursivas que determinam a interseção do raio com os objetos que estão presentes na cena, e assim geram os efeitos de reflexão, sombra e transparência.</p>
+      <div class="alts">É correto o que se afirma em:<br><b>a) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.</b><br><span class="vf">(b, c, d, e não visíveis na foto)</span></div>
+      </div>
+      <p><strong>Asserção I:</strong> "o ray-tracing tem várias chamadas recursivas, com <strong>somente raios refletidos</strong>." → <strong>FALSA.</strong> Não são só raios refletidos: há também <strong>raios refratados (transparência) e raios de sombra</strong>.</p>
+      <p><strong>Razão II:</strong> "são as chamadas recursivas que determinam a interseção do raio com os objetos e geram reflexão, sombra e transparência." → <strong>VERDADEIRA.</strong></p>
+      <div class="callout tip"><div class="t">✅ Resposta: a asserção I é FALSA e a II é VERDADEIRA</div>(é a 1ª alternativa do enunciado: <em>"A asserção I é uma proposição falsa, e a II é uma proposição verdadeira"</em>).</div>
+    </div></details>
+
+    <details class="qa"><summary><span class="q">Q8</span> ⏳ Aguardando foto</summary>
+    <div class="body"><p>A Questão 8 não aparece nas fotos (entre a Q7 e a Q9). <strong>Está na foto que falta</strong> — me mande que eu resolvo.</p></div></details>
+
+    <details class="qa" open><summary><span class="q">Q9</span> Asserção/razão (bump map) → (d)</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 9 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Bump map: é a técnica de simular relevo em uma superfície sem a necessidade da criação de novos polígonos (faces), ele gera sombra e reflexão de acordo com a câmera.</p>
+      <p class="stmt"><strong>I —</strong> A técnica de bump map gera uma ilusão de relevo<br>
+      <strong>PORQUE</strong><br>
+      <strong>II —</strong> A cor que vista pelo observador é em função de um vetor da superfície e a direção da luz</p>
+      <div class="alts">É correto o que se afirma em:<br>
+      a) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.<br>
+      b) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.<br>
+      c) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.<br>
+      <b>d) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.</b><br>
+      e) As asserções I e II são proposições falsas.</div>
+      </div>
+      <p><strong>Asserção I:</strong> "a técnica de bump map gera uma ilusão de relevo." → <strong>VERDADEIRA.</strong></p>
+      <p><strong>Razão II:</strong> "a cor vista pelo observador é função de um vetor da superfície (a <strong>normal</strong>) e da direção da luz." → <strong>VERDADEIRA.</strong></p>
+      <p>O bump map cria o relevo <strong>justamente perturbando as normais</strong>; como a cor (iluminação) depende da normal e da direção da luz, a normal alterada muda o sombreamento → ilusão de relevo. Portanto a <strong>II justifica corretamente a I</strong>.</p>
+      <div class="callout tip"><div class="t">✅ Resposta: (d) As asserções I e II são verdadeiras, e a II é justificativa correta da I</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q10</span> V/F: z-buffer/aliasing, cor da luz, ambiente facetado → (b) F, F, F</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 10 [ENADE] · 1,0 ponto</span>
+      <p class="stmt">Assinale V ou F:</p>
+      <p class="stmt"><span class="vf">( )</span> Com o algoritmo que faz o sort pela profundidade usando um buffer não é gerado alias ou serrilhado na renderização, apesar do algoritmo guardar apenas a um valor relativos a profundidade/armazenamento por pixel.</p>
+      <p class="stmt"><span class="vf">( )</span> A única cor que conta para a visualização de uma cena real é a cor de cada objeto, sendo a cor da luz de pouca importância.</p>
+      <p class="stmt"><span class="vf">( )</span> Quando se considera somente a luz ambiente ou um modelo de iluminação sem tratar a direção da luz, ao se visualizar um ou mais objetos 3D numa cena, estes terão a aparência de facetados.</p>
+      <div class="alts">Assinale a alternativa correta:<br>a) F, F, V &nbsp; <b>b) F, F, F</b> &nbsp; c) F, V, V &nbsp; d) V, V, V &nbsp; e) V, F, V</div>
+      </div>
+      <ul>
+        <li><strong>(F)</strong> O Z-buffer (sort por profundidade com buffer) <strong>gera, sim, aliasing/serrilhado</strong> — guarda um valor por pixel, o que causa serrilhado. A frase nega isso → falsa.</li>
+        <li><strong>(F)</strong> A <strong>cor da luz tem importância</strong> sim (afeta toda a cena). Não é só a cor do objeto que conta.</li>
+        <li><strong>(F)</strong> Só com luz ambiente (sem direção da luz) os objetos ficam com cor <strong>uniforme/chapada</strong>, perdendo o volume — parecem <strong>planos (2D)</strong>, e <strong>não "facetados"</strong>. (Facetamento aparece no Flat <em>com</em> luz direcional.)</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (b) F, F, F</div></div>
+    </div></details>
+
+    <details class="qa" open><summary><span class="q">Q11</span> Animação: mínimo de quadros/segundo → (e) 10</summary>
+    <div class="body">
+      <div class="enun"><span class="lbl">📄 Enunciado — Questão 11 [ENADE] · 0,5 ponto</span>
+      <p class="stmt">O termo animação vem do latim <em>animare</em> = dar vida, animo, movimento. Conceito de Animação: Ato de introduzir a ilusão do movimento a partir da exposição rápida de imagens estáticas. Conforme estudado, quantos quadros por segundo no mínimo são necessários para se perceber o movimento?</p>
+      <div class="alts">a) 12 &nbsp; b) 24 &nbsp; c) 30 &nbsp; d) 20 &nbsp; <b>e) 10</b></div>
+      </div>
+      <p>Segundo o material da disciplina (<em>CapituloDeAnimacao.pdf</em>, slide "Conceito de Animação — Percepção"):</p>
+      <ul>
+        <li><strong>Sensação de movimento: 10 quadros por segundo, no mínimo</strong> ✔️</li>
+        <li>Desenho animado: 12 a 24 quadros por segundo</li>
+        <li>Filmes de imagens reais: cerca de 30 quadros por segundo</li>
+      </ul>
+      <div class="callout tip"><div class="t">✅ Resposta: (e) 10</div>A pergunta pede o <strong>mínimo para perceber movimento</strong> → 10 fps. Cuidado com a pegadinha: 24 é desenho animado e 30 é filme de imagens reais.</div>
+    </div></details>
+
+    <div class="callout key">
+      <div class="t">📸 Ainda faltam Q3 e Q8</div>
+      Para fechar 100% do gabarito, preciso da imagem com: <strong>enunciado + figuras da Q3</strong> e <strong>Q8 inteira</strong> (e, se possível, as alternativas completas da Q7). Manda aqui que eu atualizo esta seção.
+    </div>
   </section>
 
   </main>
